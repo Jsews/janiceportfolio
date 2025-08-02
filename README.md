@@ -42,7 +42,7 @@ The visual design uses a soft, modern palette:
 
 Full documentation is available in PDF format.
 
-📥 [Download Documentation (PDF)]()
+📥 [Download Documentation (PDF)](https://github.com/Jsews/janiceportfolio/blob/main/Portfolio_Hackathon_Documentation_Janice_Sewava.pdf)
 
 The documentation covers:
 - Project overview
@@ -51,7 +51,6 @@ The documentation covers:
 - GitHub deployment guide
 
 ---
-
 ## 🚀 Deployment Instructions
 To host this portfolio on GitHub Pages:
 
