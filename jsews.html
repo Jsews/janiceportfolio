@@ -1,207 +1,261 @@
+<!-- Tells the browser this is an HTML5 document -->
 <!DOCTYPE html>
+
+<!-- Set the language of the document to English -->
 <html lang="en">
+
 <head>
+  <!-- Define character encoding -->
   <meta charset="UTF-8" />
+
+  <!-- Set viewport for responsive design on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title shown in the browser tab -->
   <title>Janice Sewava Portfolio</title>
+
+  <!-- Internal CSS styles -->
   <style>
+    /* Apply box-sizing to all elements and remove default margin and padding */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    /* Body styling */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #f3e5f5, #ede7f6);
-      color: #333;
-      overflow-x: hisdden;
-      padding: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set a clean font */
+      background: linear-gradient(to bottom right, lightpink, cyan); /* Soft gradient background */
+      color: #333; /* Text color */
+      overflow-x: hidden; /* Prevent horizontal scroll */
+      padding: 2rem; /* Padding around content */
     }
 
+    /* Header section with flex layout and gradient background */
     header {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      background: linear-gradient(to right, #6a1b9a, #4a148c);
-      color: white;
-      border-radius: 90px;
-      padding: 15rem;
-      margin-bottom: 2rem;
-      animation: fadeInDown 1s ease-in-out;
+      display: flex; /* Align image and info in a row */
+      align-items: center; /* Vertically center items */
+      gap: 2rem; /* Space between items */
+      background: linear-gradient(to right, violet, #d291f4); /* Gradient background */
+      color: white; /* Text color */
+      border-radius: 90px; /* Rounded corners */
+      padding: 15rem; /* Large padding */
+      margin-bottom: 2rem; /* Space below header */
+      animation: fadeInDown 1s ease-in-out; /* Entry animation */
     }
 
-    .profile-img img {
-      width: 64px;
-      height: 64px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
+    /* Style for the profile image */
+    .profile-pic {
+      width: 150px; /* Image width */
+      height: 150px; /* Image height */
+      object-fit: cover; /* Fill container without distortion */
+      border-radius: 50%; /* Make image circular */
+      border: 2px solid white; /* White border around image */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Soft shadow */
+      transition: transform 0.3s ease; /* Hover animation */
     }
 
-    .profile-img img:hover {
+    /* Zoom effect when hovered */
+    .profile-pic:hover {
       transform: scale(1.05);
     }
 
+    /* Container for profile name and description */
     .profile-info {
-      flex: 1;
+      flex: 1; /* Take remaining space */
     }
 
     .profile-info h1 {
-      font-size: 2.5rem;
+      font-size: 2.5rem; /* Large name font */
     }
 
     .profile-info p {
-      font-size: 1.2rem;
+      font-size: 1.2rem; /* Description font */
     }
 
+    /* Main grid container for cards */
     .dashboard {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: minmax(250px, auto);
-      gap: 2rem;
-      animation: fadeIn 1.2s ease-in-out;
+      display: grid; /* Use CSS Grid */
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      grid-auto-rows: minmax(200px, auto); /* Row height */
+      gap: 2rem; /* Space between cards */
+      animation: fadeIn 1.2s ease-in-out; /* Entry animation */
     }
 
+    /* Each card block styling */
     .card {
-      background-color: white;
-      padding: 5rem;
-      border-radius: 75px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      font-size: 1.5rem;
-      display: flex;
+      background-color: white; /* Clean card base */
+      padding: 5rem; /* Inner spacing */
+      border-radius: 75px; /* Rounded corners */
+      box-shadow: 0 8px 24: px rgba(0,0,0,0.15); /* Shadow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+      font-size: 1.5rem; /* Text size */
+      display: flex; /* Flex for vertical centering */
       flex-direction: column;
       justify-content: center;
     }
 
+    /* Slight scale and stronger shadow on hover */
     .card:hover {
       transform: scale(1.02);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
     }
 
     .card h2 {
-      color: #6a1b9a;
-      margin-bottom: 1rem;
+      color: violet; /* headings in violet */
+      margin-bottom: 1rem; /* Space below heading */
     }
 
+    /* General link styling */
     a {
-      color: #4a148c;
-      text-decoration: none;
+      color: #e91e63; /* Deep pink links */
+      text-decoration: none; /* No underline */
     }
 
+    /* Special wide card for contact */
     .contact-card {
-      grid-column: span 2;
-      background: linear-gradient(to bottom, #ede7f6, #ffffff);
+      grid-column: span 2; /* Stretch across two columns */
+      background: linear-gradient(to bottom, cyan, white); /* Gradient background */
     }
 
+    /* Footer styling */
     footer {
-      text-align: center;
-      margin-top: 3rem;
-      padding: 1rem;
-      background: #4a148c;
-      color: white;
-      border-radius: 12px;
-      animation: fadeInUp 1s ease-in-out;
+      text-align: center; /* Center content */
+      margin-top: 3rem; /* Space above footer */
+      padding: 1rem; /* Padding inside */
+      background: violet; /* Background color */
+      color: white; /* Text color */
+      border-radius: 12px; /* Rounded corners */
+      animation: fadeInUp 1s ease-in-out; /* Slide-up animation */
     }
 
+    /* Fade-in animation for cards */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Header animation from top */
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Footer animation from bottom */
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Form field styles */
     form input, form textarea {
-      width: 100%;
-      padding: 0.7rem;
-      margin: 0.6rem 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
+      width: 100%; /* Full width */
+      padding: 0.7rem; /* Inner space */
+      margin: 0.6rem 0; /* Space between inputs */
+      border: 1px solid #ccc; /* Light border */
+      border-radius: 8px; /* Rounded corners */
+      font-size: 1rem; /* Text size */
     }
 
+    /* Submit button style */
     button[type="submit"] {
-      background-color: #6a1b9a;
-      color: white;
-      padding: 0.8rem 1.4rem;
+      background-color: violet; /* Button color */
+      color: white; /* Text color */
+      padding: 0.8rem 1.4rem; /* Size */
       border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      border-radius: 8px; /* Rounded corners */
+      cursor: pointer; /* Pointer on hover */
+      transition: background-color 0.3s ease; /* Smooth color change */
       font-size: 1rem;
     }
 
+    /* Button hover effect */
     button[type="submit"]:hover {
-      background-color: #4a148c;
+      background-color: #008ba3;
     }
   </style>
 </head>
+
 <body>
+
+  <!-- Header section with profile picture and intro -->
   <header>
-    <div class="profile-img">
-      <img src="profile.jpg" alt="Janice Sewava" />
+    <!-- Profile image (make sure file exists) -->
+    <div class="profile-pic">
+      <img src="4 copy_1.jpg" alt="Profile Photo" class="profile-pic">
     </div>
+
+    <!-- Profile name and role -->
     <div class="profile-info">
       <h1>Janice Sewava</h1>
       <p>Aspiring Data Analyst & Project Business Assistant</p>
     </div>
   </header>
 
+  <!-- Dashboard: Grid of profile cards -->
   <div class="dashboard">
+
+    <!-- About card -->
     <div class="card">
       <h2>About Me</h2>
-      <p>Tech enthusiast majoring in Economics and Statistics at UDSM. Passionate about STEM since childhood and driven by innovation.</p>
+      <p>Tech enthusiast majoring in Economics and Statistics at University of Dar es Salaam. Passionate about STEM since childhood and driven by innovation.</p>
     </div>
 
+    <!-- Programming languages -->
     <div class="card">
       <h2>Programming Languages</h2>
       <p>JavaScript, Python, SQL</p>
     </div>
 
+    <!-- Education background -->
     <div class="card">
-      <h2>Education</h2>
-      <p>Regent Daycare (2006–2009), Lincoln Academy (2010), Ebenezer (2011), Doris English Medium (2012–2016), Kijichi Sec. School (2017–2020), Bwiru Girls (2021–2023), UDSM (2023–Present)</p>
+      <h2>Education level</h2>
+      <p>Regent Daycare (2006–2009)</p>
+      <p>Lincoln Academy (2010)</p>
+      <p>Ebenezer Pre and Primary (2011)</p>
+      <p>Doris English Medium (2012–2016)</p>
+      <p>Kijichi Secondary School (2017–2020)</p>
+      <p>Bwiru Girls High School (2021–2023)</p>
     </div>
 
+    <!-- Languages spoken -->
     <div class="card">
       <h2>Languages</h2>
       <p>English, Swahili, French</p>
     </div>
 
+    <!-- Interests and activities -->
     <div class="card">
       <h2>Interests</h2>
-      <p>Coding, Robotics (Dubai Robotics Challenge), Entrepreneurship (Summits with Vusi Thembekwayo, Apps & Girls)</p>
+      <p>Coding, Robotics (Dubai Robotics Challenge), Public Speaking</p>
+      <p>Entrepreneurship (Summits with Vusi Thembekwayo, Girls Entrepreneurship Summit with Apps and Girls)</p>
     </div>
 
+    <!-- Certificates and achievements -->
     <div class="card">
       <h2>Certificates</h2>
-      <p>Zydii, Niajiri, Unikonekt, FEMA, PCCB, Robotics, JKT</p>
+      <p>Zydii, Niajiri-Unikonekt, FEMA, PCCB, Robotics, JKT</p>
     </div>
 
+    <!-- CV download -->
     <div class="card">
       <h2>CV</h2>
       <p><a href="Janice_Sewava_CV.pdf" download>Download My CV</a></p>
     </div>
 
+    <!-- Projects placeholder -->
     <div class="card">
       <h2>Projects</h2>
       <p>Coming soon: Projects in data analysis and software development.</p>
     </div>
 
+    <!-- Contact information and message form -->
     <div class="card contact-card">
       <h2>Contact Info</h2>
       <p>📞 0678 533 227 / 0755 533 227<br>📧 janicepeter2405@gmail.com</p>
+      
+      <!-- Contact form (non-functional) -->
       <form>
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
@@ -211,8 +265,11 @@
     </div>
   </div>
 
+  <!-- Footer section -->
   <footer>
     <p>&copy; 2025 Janice Sewava. Built with HTML & CSS. Dashboard Layout with Animation and Transitions.</p>
   </footer>
+
 </body>
 </html>
+
