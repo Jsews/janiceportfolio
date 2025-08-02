@@ -33,8 +33,8 @@ The visual design uses a soft, modern palette:
 - Responsive two-column dashboard layout  
 - Circular animated profile photo  
 - Smooth hover transitions on cards and buttons  
-- Fade-in effects for header, dashboard, and footer  
-- Downloadable CV and a contact form (HTML only)
+- Fade-in effects for header, dashboard, and foot
+- Downloadable CV [ download CV (PDF)](https://github.com/Jsews/janiceportfolio/blob/main/Janice_Sewava_CV_Table_Format.pdf)  and a contact form (HTML only)
 
 ---
 
