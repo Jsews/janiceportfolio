@@ -5,7 +5,7 @@ Built entirely using **vanilla HTML and CSS**, this project reflects my technica
 
 ## 🌐 Live Demo
 
-[🔗 View Portfolio Website (via GitHub Pages)](https://github.com/jsews/janiceportfolio)  
+[🔗 View Portfolio Website (via GitHub Pages)](https://jsews.github.io/janiceportfolio/)
 
 ---
 
@@ -59,7 +59,7 @@ To host this portfolio on GitHub Pages:
 3. Make sure your homepage is named `index.html`.
 4. Go to **Repository Settings > Pages**.
 5. Under **Source**, choose `main` branch and save.
-6. My site will be live at: ` https://jsews.github.io/janiceportfolio/'
+6. My site will be live at:'https://jsews.github.io/janiceportfolio/'
 ---
 
 ## 👩‍💻 About Me
