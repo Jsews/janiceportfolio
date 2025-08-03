@@ -5,7 +5,7 @@ Built entirely using **vanilla HTML and CSS**, this project reflects my technica
 
 ## 🌐 Live Demo
 
-[🔗 View Portfolio Website (via GitHub Pages)](https://github.com/Jsews/janiceportfolio)
+[🔗 View Portfolio Website (via GitHub Pages)](https://jsews.github.io/janiceportfolio/)
 
 ---
 
